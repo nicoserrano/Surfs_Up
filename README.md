@@ -16,7 +16,7 @@ This project consisted on analyzing weather data from Oahu, Hawaii to support a 
   - Flask
 
 ## Results
-Statistical results of the precipitation and temperature of the two most active and important months of the year across the years:
+Statistical results of the precipitation and temperature of the two most active and important months across the years as follows:
 
 ![Final_stats](https://user-images.githubusercontent.com/83378141/125126996-eb8f0880-e0c9-11eb-9e05-897e35e1ff2a.png)
 
