@@ -46,4 +46,4 @@ stats_prcp_dec = Precip_dec.describe()
 stats_prcp_dec
 ```
 
-For more detail on the Python script and libraries used refer to the [SurfsUp Jupyter Notebook](https://github.com/nicoserrano/Surfs_Up/blob/main/SurfsUp_Challenge.ipynb)
+For more detail on the Python script and libraries used refer to the [Surf's Up Jupyter Notebook](https://github.com/nicoserrano/Surfs_Up/blob/main/SurfsUp_Challenge.ipynb)
