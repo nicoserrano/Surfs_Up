@@ -15,9 +15,32 @@ This project consisted on analyzing weather data from Oahu, Hawaii to support a 
   - SQLite
   - Flask
 
-## Results
+## Summary
 Statistical results of the precipitation and temperature of the two most active and important months across the years as follows:
 
 ![Final_stats](https://user-images.githubusercontent.com/83378141/125126996-eb8f0880-e0c9-11eb-9e05-897e35e1ff2a.png)
 
-As it can be seen, 
+- As it can be seen, the average temperature for both June and December are considered good weather suitable for ice-cream (71°F and 74.0°F).
+- None of the two seasons of the year show to have considerably high average precipitation. The precipitation distribution for both June and December happens to be skewed to the right meaning that it is not normally raining. 1st Quartile and median have 0mm, and the 3rd Quartile has 0.1mm which is minimum precipitation. 
+- It must be taken into consideration that the month of december happens to have a max precipitation of 6.4mm which is considered heavy rain. On the other hand, the max precipitation for June happens to be 4.4mm which is considered medium-high. Overall, the distribution shows that precipitation might not be enough reason to close our shop out-of-business due to weather conditions. 
+- Taking all this into account, June happens to be the most profitable time of the year as the distribution of the weather is more suitable for surfing and ice-cream sales. 
+
+## Results
+The extra precipitation results were created by querying from our SQLite database as follows: 
+```
+# For June
+prcp_june = []
+prcp_june = session.query(Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+Precip_june = pd.DataFrame(prcp_june, columns=['June Precipitation'])
+stats_prcp_june = Precip_june.describe()
+stats_prcp_june
+
+# For December 
+prcp_dec = []
+prcp_dec = session.query(Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
+Precip_dec = pd.DataFrame(prcp_dec, columns=['December Precipitation'])
+stats_prcp_dec = Precip_dec.describe()
+stats_prcp_dec
+```
+
+For more detail on the Python script and libraries used refer to the [SurfsUp Jupyter Notebook](http://localhost:8888/notebooks/Surfs_Up/SurfsUp_Challenge.ipynb)
