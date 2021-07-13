@@ -15,7 +15,7 @@ This project consisted on analyzing weather data from Oahu, Hawaii to support a 
   - SQLite
   - Flask
 
-## Summary
+## Results
 Statistical results of the precipitation and temperature of the two most active and important months across the years as follows:
 
 ![Final_stats](https://user-images.githubusercontent.com/83378141/125126996-eb8f0880-e0c9-11eb-9e05-897e35e1ff2a.png)
@@ -25,7 +25,10 @@ Statistical results of the precipitation and temperature of the two most active 
 - It must be taken into consideration that the month of december happens to have a max precipitation of 6.4mm which is considered heavy rain. On the other hand, the max precipitation for June happens to be 4.4mm which is considered medium-high. Overall, the distribution shows that precipitation might not be enough reason to close our shop out-of-business due to weather conditions. 
 - Taking all this into account, June happens to be the most profitable time of the year as the distribution of the weather is more suitable for surfing and ice-cream sales. 
 
-## Results
+## Summary
+
+The results were found by querying the SQLite database from the Jupyter notebook to then use the `describe()` function to get the statistical analysis. 
+
 The extra precipitation results were created by querying from our SQLite database as follows: 
 ```
 # For June
